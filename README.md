@@ -45,7 +45,7 @@ clawhub install ovirt-mcp
 
 ```bash
 git clone https://github.com/imjoey/ovirt-mcp-skill.git
-cp -r ovirt-mcp-skill ~/.openclaw/skills/
+cp -r ovirt-mcp-skill ~/.openclaw/skills/ovirt-mcp
 ```
 
 ## Prerequisites
