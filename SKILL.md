@@ -117,13 +117,23 @@ All errors return structured JSON with error code, message, and retry guidance:
 
 ## Available Tools
 
-150+ tools across 27 categories. See references for complete parameter documentation:
+187 tools across 27 categories. Each reference file is self-contained with its own index:
 
-| Reference File | Covers |
-|---------------|--------|
-| [vm-host-cluster.md](references/vm-host-cluster.md) | VM lifecycle, VM pools, checkpoints, snapshots, host management, clusters, CPU profiles, instance types |
-| [storage-disk-network.md](references/storage-disk-network.md) | Storage domains, disks, logical networks, VNIC profiles, network filters, QoS, MAC pools |
-| [system-events-rbac-quota.md](references/system-events-rbac-quota.md) | System info, jobs, events, RBAC (users/groups/roles/permissions/tags), quotas, affinity groups/labels, data centers |
+| File | Tools | Covers |
+|------|-------|--------|
+| [vm.md](references/vm.md) | 35 | VM lifecycle, pools, checkpoints, snapshots |
+| [host.md](references/host.md) | 19 | Host management, fencing, iSCSI |
+| [cluster.md](references/cluster.md) | 16 | Clusters, CPU profiles, data centers |
+| [instance-types.md](references/instance-types.md) | 2 | Instance types |
+| [storage.md](references/storage.md) | 16 | Storage domains, connections, iSCSI bonds |
+| [disk.md](references/disk.md) | 13 | Disk lifecycle, snapshots, move, resize |
+| [network.md](references/network.md) | 17 | Networks, VNIC profiles, QoS, MAC pools |
+| [template.md](references/template.md) | 8 | Template lifecycle, disk/NIC lists |
+| [system.md](references/system.md) | 6 | System info, jobs |
+| [events.md](references/events.md) | 11 | Events, bookmarks, alerts |
+| [rbac.md](references/rbac.md) | 24 | Users, groups, roles, permissions, tags, filters |
+| [quota.md](references/quota.md) | 7 | Data center quotas |
+| [affinity.md](references/affinity.md) | 13 | Affinity groups and labels |
 
 ### Quick Category Reference
 
