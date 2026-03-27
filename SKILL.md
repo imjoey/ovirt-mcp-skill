@@ -123,11 +123,12 @@ All errors return structured JSON with error code, message, and retry guidance:
 |------|-------|--------|
 | [vm.md](references/vm.md) | 35 | VM lifecycle, pools, checkpoints, snapshots |
 | [host.md](references/host.md) | 19 | Host management, fencing, iSCSI |
-| [cluster.md](references/cluster.md) | 16 | Clusters, CPU profiles, data centers |
+| [cluster.md](references/cluster.md) | 11 | Clusters, CPU profiles |
+| [datacenter.md](references/datacenter.md) | 5 | Data centers |
 | [instance-types.md](references/instance-types.md) | 2 | Instance types |
 | [storage.md](references/storage.md) | 16 | Storage domains, connections, iSCSI bonds |
 | [disk.md](references/disk.md) | 13 | Disk lifecycle, snapshots, move, resize |
-| [network.md](references/network.md) | 17 | Networks, VNIC profiles, QoS, MAC pools |
+| [network.md](references/network.md) | 16 | Networks, VNIC profiles, QoS, MAC pools |
 | [template.md](references/template.md) | 8 | Template lifecycle, disk/NIC lists |
 | [system.md](references/system.md) | 6 | System info, jobs |
 | [events.md](references/events.md) | 11 | Events, bookmarks, alerts |
@@ -162,7 +163,7 @@ All errors return structured JSON with error code, message, and retry guidance:
 | Affinity Groups | 7 | `affinity_group_list/create/update/delete/add_vm/remove_vm` |
 | Affinity Labels | 6 | `affinity_label_list/create/delete/assign/unassign` |
 | Events | 11 | `event_list`, `event_search`, `event_alerts/errors/warnings`, `event_summary` |
-| RBAC | 21 | `user_*`, `group_*`, `role_*`, `permission_*`, `tag_*` |
+| RBAC | 24 | `user_*`, `group_*`, `role_*`, `permission_*`, `tag_*`, `filter_list` |
 | Quotas | 7 | `quota_list/create/update/delete`, `quota_*_limit_list` |
 | System & Jobs | 6 | `system_get`, `job_list`, `job_cancel`, `system_statistics` |
 
