@@ -1,11 +1,11 @@
 ---
 name: ovirt-mcp
-description: Manage oVirt/RHV virtualization infrastructure via MCP. Provides 150+ tools for VMs, hosts, clusters, networks, storage, templates, snapshots, disks, events, RBAC, quotas, and more. Use when the user asks to manage oVirt virtual machines, create/delete/modify VMs, check host status, manage storage domains, handle templates, configure networks, manage user permissions, view events/alerts, or any oVirt/RHV infrastructure operations. Triggers on "oVirt", "RHV", "virtual machine", "VM management", "storage domain", "cluster", "host management".
+description: Manage oVirt/RHV virtualization infrastructure via MCP. Provides 186 tools for VMs, hosts, clusters, networks, storage, templates, snapshots, disks, events, RBAC, quotas, and more. Use when the user asks to manage oVirt virtual machines, create/delete/modify VMs, check host status, manage storage domains, handle templates, configure networks, manage user permissions, view events/alerts, or any oVirt/RHV infrastructure operations. Triggers on "oVirt", "RHV", "virtual machine", "VM management", "storage domain", "cluster", "host management".
 ---
 
 # oVirt MCP Server
 
-MCP server for oVirt/RHV virtualization management. 150+ tools covering the full infrastructure lifecycle.
+MCP server for oVirt/RHV virtualization management. 186 tools covering the full infrastructure lifecycle.
 
 **Version**: 0.1.0 | **License**: MIT | **Author**: Joey Ma (@imjoey)
 
@@ -82,7 +82,7 @@ MCP Client (Claude / OpenClaw / etc.)
   MCP Server (server.py)
   ┌─────────────────────────────┐
   │  OvirtMCP (ovirt_mcp.py)    │  ← Core SDK wrapper (ovirtsdk4)
-  │  150+ methods               │
+  │  186 methods               │
   ├─────────────────────────────┤
   │  Extension Modules:         │
   │  NetworkMCP · ClusterMCP    │
@@ -117,13 +117,24 @@ All errors return structured JSON with error code, message, and retry guidance:
 
 ## Available Tools
 
-150+ tools across 27 categories. See references for complete parameter documentation:
+186 tools across 27 categories. Each reference file is self-contained with its own index:
 
-| Reference File | Covers |
-|---------------|--------|
-| [vm-host-cluster.md](references/vm-host-cluster.md) | VM lifecycle, VM pools, checkpoints, snapshots, host management, clusters, CPU profiles, instance types |
-| [storage-disk-network.md](references/storage-disk-network.md) | Storage domains, disks, logical networks, VNIC profiles, network filters, QoS, MAC pools |
-| [system-events-rbac-quota.md](references/system-events-rbac-quota.md) | System info, jobs, events, RBAC (users/groups/roles/permissions/tags), quotas, affinity groups/labels, data centers |
+| File | Tools | Covers |
+|------|-------|--------|
+| [vm.md](references/vm.md) | 35 | VM lifecycle, pools, checkpoints, snapshots |
+| [host.md](references/host.md) | 19 | Host management, fencing, iSCSI |
+| [cluster.md](references/cluster.md) | 11 | Clusters, CPU profiles |
+| [datacenter.md](references/datacenter.md) | 5 | Data centers |
+| [instance-types.md](references/instance-types.md) | 2 | Instance types |
+| [storage.md](references/storage.md) | 16 | Storage domains, connections, iSCSI bonds |
+| [disk.md](references/disk.md) | 13 | Disk lifecycle, snapshots, move, resize |
+| [network.md](references/network.md) | 16 | Networks, VNIC profiles, QoS, MAC pools |
+| [template.md](references/template.md) | 8 | Template lifecycle, disk/NIC lists |
+| [system.md](references/system.md) | 6 | System info, jobs |
+| [events.md](references/events.md) | 11 | Events, bookmarks, alerts |
+| [rbac.md](references/rbac.md) | 24 | Users, groups, roles, permissions, tags, filters |
+| [quota.md](references/quota.md) | 7 | Data center quotas |
+| [affinity.md](references/affinity.md) | 13 | Affinity groups and labels |
 
 ### Quick Category Reference
 
@@ -152,7 +163,7 @@ All errors return structured JSON with error code, message, and retry guidance:
 | Affinity Groups | 7 | `affinity_group_list/create/update/delete/add_vm/remove_vm` |
 | Affinity Labels | 6 | `affinity_label_list/create/delete/assign/unassign` |
 | Events | 11 | `event_list`, `event_search`, `event_alerts/errors/warnings`, `event_summary` |
-| RBAC | 21 | `user_*`, `group_*`, `role_*`, `permission_*`, `tag_*` |
+| RBAC | 24 | `user_*`, `group_*`, `role_*`, `permission_*`, `tag_*`, `filter_list` |
 | Quotas | 7 | `quota_list/create/update/delete`, `quota_*_limit_list` |
 | System & Jobs | 6 | `system_get`, `job_list`, `job_cancel`, `system_statistics` |
 
